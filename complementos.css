@@ -1,0 +1,32 @@
+.complemento {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.complemento img {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+.complemento h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.complemento p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.complemento .precio {
+  font-weight: bold;
+  font-size: 18px;
+  color: #007bff;
+}
