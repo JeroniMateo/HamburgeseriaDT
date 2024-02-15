@@ -3,20 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Hamburguesas</title>
+  <link rel="stylesheet" href="hamburguesas.css">
 </head>
 <body>
 
 <?php
 
 // Conexión a la base de datos
-$db = new PDO('mysql:host=localhost;dbname=hamburgueseria', 'root', '');
+$db = new PDO('mysql:host=localhost;dbname=hamburgueseriadt', 'root', 'password');
 
 // Consulta para obtener las hamburguesas
 $query = 'SELECT * FROM hamburguesas';
 
 // Ejecución de la consulta
 $stmt = $db->query($query);
-
+?>
+  <?php 
+  include 'navbar.php';
+  ?>
+  <div class="hamburguesas">
+<?php
 // Recorrido de las hamburguesas
 while ($hamburguesa = $stmt->fetch()) {
   ?>
@@ -28,8 +34,9 @@ while ($hamburguesa = $stmt->fetch()) {
   </div>
   <?php
 }
-
 ?>
+
+</div>
 
 </body>
 </html>
