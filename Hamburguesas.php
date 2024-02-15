@@ -8,9 +8,8 @@
 <body>
 
 <?php
-
-// Conexión a la base de datos
-$db = new PDO('mysql:host=localhost;dbname=hamburgueseriadt', 'root', 'password');
+include 'db.php';
+include 'navbar.php';
 
 // Consulta para obtener las hamburguesas
 $query = 'SELECT * FROM hamburguesas';
@@ -18,9 +17,6 @@ $query = 'SELECT * FROM hamburguesas';
 // Ejecución de la consulta
 $stmt = $db->query($query);
 ?>
-  <?php 
-  include 'navbar.php';
-  ?>
   <div class="hamburguesas">
 <?php
 // Recorrido de las hamburguesas

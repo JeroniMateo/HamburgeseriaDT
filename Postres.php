@@ -8,8 +8,9 @@
 
 <?php
 
-// Conexión a la base de datos
-$db = new PDO('mysql:host=localhost;dbname=hamburgueseria', 'root', '');
+include 'db.php';
+include 'navbar.php';
+
 
 // Consulta para obtener los postres
 $query = 'SELECT * FROM postres';
