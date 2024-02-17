@@ -2,11 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Hamburguesas</title>
+  <title>Postres</title>
+  <link rel="stylesheet" href="postres.css">
 </head>
 <body>
-
-<?php
+  <?php
 
 include 'db.php';
 include 'navbar.php';
@@ -17,7 +17,11 @@ $query = 'SELECT * FROM postres';
 
 // Ejecución de la consulta
 $stmt = $db->query($query);
+?>
 
+<div id="postres">
+
+<?php
 // Recorrido de los postres
 while ($postre = $stmt->fetch()) {
   ?>
@@ -31,7 +35,7 @@ while ($postre = $stmt->fetch()) {
 }
 
 ?>
-
+</div>
 
 </body>
 </html>

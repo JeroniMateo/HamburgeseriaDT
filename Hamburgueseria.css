@@ -14,7 +14,11 @@ header {
   padding: 20px;
   text-align: center;
 }
+.nav-item{
+  margin-right: 5vh;
+  font-size: 3vh;
 
+}
 main {
   display: flex;
   flex-direction: row;
@@ -30,6 +34,10 @@ section {
 .menu-principal {
   background-color: #ddd;
   padding: 20px;
+}
+.mainNavbar{
+  margin-left: 5vh;
+  font-size: 10vh;
 }
 
 .menu-principal ul {
@@ -91,6 +99,12 @@ section {
   background-color: #0062cc;
 }
 
+#mainNavbar{
+  margin-right: 5vh;
+  font-size: 4vh;
+  color: burlywood;
+}
+
 /* Media queries para dispositivos móviles */
 @media (max-width: 768px) {
   main {
@@ -101,3 +115,4 @@ section {
     width: 100%;
   }
 }
+

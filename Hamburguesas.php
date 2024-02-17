@@ -17,7 +17,7 @@ $query = 'SELECT * FROM hamburguesas';
 // Ejecución de la consulta
 $stmt = $db->query($query);
 ?>
-  <div class="hamburguesas">
+  <div id="hamburguesas">
 <?php
 // Recorrido de las hamburguesas
 while ($hamburguesa = $stmt->fetch()) {

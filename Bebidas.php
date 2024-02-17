@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Hamburguesas</title>
+  <title>Bebidas</title>
+  <link rel="stylesheet" href="bebidas.css">
 </head>
 <body>
 

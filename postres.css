@@ -5,28 +5,38 @@
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%; /* Ajusta el ancho según tu diseño */
+  margin: 5px;
+  flex-direction: column;
 }
 
 .postre img {
-  width: 150px;
-  height: 150px;
+  width: 25vh;
+  height: 25vh;
   display: block;
   margin: 0 auto;
 }
 
 .postre h3 {
-  font-size: 18px;
+  font-size: 5vh;
   margin-top: 10px;
   margin-bottom: 5px;
 }
 
 .postre p {
-  font-size: 16px;
+  font-size: 3vh;
   margin-bottom: 10px;
 }
 
 .postre .precio {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 3vh;
   color: #007bff;
+}
+#postres {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
