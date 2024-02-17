@@ -13,25 +13,30 @@
 }
 
 .complemento img {
-  width: 150px;
-  height: 150px;
+  width: 25vh;
+  height: 25vh;
   display: block;
   margin: 0 auto;
 }
 
 .complemento h3 {
-  font-size: 18px;
+  font-size: 5vh;
   margin-top: 10px;
   margin-bottom: 5px;
 }
 
 .complemento p {
-  font-size: 16px;
+  font-size: 3vh;
   margin-bottom: 10px;
 }
 
 .complemento .precio {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 3vh;
   color: #007bff;
+}
+#complementos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }

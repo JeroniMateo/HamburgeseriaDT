@@ -18,7 +18,9 @@ $query = 'SELECT * FROM complementos';
 
 // Ejecución de la consulta
 $stmt = $db->query($query);
-
+?>
+  <div id="complementos">
+<?php
 // Recorrido de los complementos
 while ($complemento = $stmt->fetch()) {
   ?>
@@ -32,6 +34,6 @@ while ($complemento = $stmt->fetch()) {
 }
 
 ?>
-
+</div>
 </body>
 </html>

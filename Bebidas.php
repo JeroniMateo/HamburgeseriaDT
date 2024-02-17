@@ -18,7 +18,9 @@ $query = 'SELECT * FROM bebidas';
 
 // Ejecución de la consulta
 $stmt = $db->query($query);
-
+?>
+  <div id="bebidas">
+<?php
 // Recorrido de las bebidas
 while ($bebida = $stmt->fetch()) {
   ?>
@@ -30,7 +32,7 @@ while ($bebida = $stmt->fetch()) {
   </div>
   <?php
 }
-
 ?>
+</div>
 </body>
 </html>
