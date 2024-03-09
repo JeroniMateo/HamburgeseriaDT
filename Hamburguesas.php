@@ -28,7 +28,7 @@ while ($hamburguesa = $stmt->fetch()) {
     <img src="<?php echo $hamburguesa['imagen']; ?>" alt="<?php echo $hamburguesa['nombre']; ?>">
     <h3><?php echo $hamburguesa['nombre']; ?></h3>
     <p><?php echo $hamburguesa['descripcion']; ?></p>
-    <span class="precio"><?php echo $hamburguesa['precio']; ?>€</span>
+    <span class="precio" data-precio="<?php echo $hamburguesa['precio']; ?>"><?php echo $hamburguesa['precio']; ?>€</span>
     <button class="añadir-producto" data-producto="<?php echo $hamburguesa['nombre']; ?>" data-precio="<?php echo $hamburguesa['precio']; ?>">Añadir Producto</button>
 
   </div>
@@ -41,6 +41,11 @@ while ($hamburguesa = $stmt->fetch()) {
   <h2>TU PEDIDO</h2>
   <ul id="lista-productos"></ul>
   <p>Total: <span id="total">0</span>€</p>
+  <div id="botonesCarrito">
+    <button id="vaciar-carrito">Vaciar Carrito</button>
+    <button id="pagar">Pagar</button>
+    <button id="cancelar">Cancelar</button>
+  </div>
 </div>
 </div>
 <script src="carrito.js"></script>
