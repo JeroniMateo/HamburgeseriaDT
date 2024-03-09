@@ -40,3 +40,16 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+#contenedor {
+  display: flex;
+}
+
+div#carrito {
+  margin-left: auto;
+    border: 1px solid #ccc;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
