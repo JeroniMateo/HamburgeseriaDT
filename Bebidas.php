@@ -19,6 +19,7 @@ $query = 'SELECT * FROM bebidas';
 // Ejecución de la consulta
 $stmt = $db->query($query);
 ?>
+<div id="contenedor">
   <div id="bebidas">
 <?php
 // Recorrido de las bebidas
@@ -27,12 +28,15 @@ while ($bebida = $stmt->fetch()) {
   <div class="bebida">
     <img src="<?php echo $bebida['imagen']; ?>" alt="<?php echo $bebida['nombre']; ?>">
     <h3><?php echo $bebida['nombre']; ?></h3>
-    <p><?php echo $bebida['descripcion']; ?></p>
-    <span class="precio"><?php echo $bebida['precio']; ?>€</span>
+    <span class="precio" data-precio="<?php echo $bebida['precio']; ?>"><?php echo $bebida['precio']; ?>€</span>
+    <button class="añadir-producto" data-producto="<?php echo $bebida['nombre']; ?>" data-precio="<?php echo $bebida['precio']; ?>">Añadir Producto</button>
+
   </div>
   <?php
 }
+include 'carrito.php';
 ?>
+</div>
 </div>
 </body>
 </html>

@@ -19,6 +19,7 @@ $query = 'SELECT * FROM complementos';
 // Ejecución de la consulta
 $stmt = $db->query($query);
 ?>
+<div id="contenedor">
   <div id="complementos">
 <?php
 // Recorrido de los complementos
@@ -27,13 +28,14 @@ while ($complemento = $stmt->fetch()) {
   <div class="complemento">
     <img src="<?php echo $complemento['imagen']; ?>" alt="<?php echo $complemento['nombre']; ?>">
     <h3><?php echo $complemento['nombre']; ?></h3>
-    <p><?php echo $complemento['descripcion']; ?></p>
-    <span class="precio"><?php echo $complemento['precio']; ?>€</span>
+    <span class="precio" data-precio="<?php echo $complemento['precio']; ?>"><?php echo $complemento['precio']; ?>€</span>
+    <button class="añadir-producto" data-producto="<?php echo $complemento['nombre']; ?>" data-precio="<?php echo $complemento['precio']; ?>">Añadir Producto</button>
   </div>
   <?php
 }
-
+include 'carrito.php';
 ?>
+</div>
 </div>
 </body>
 </html>

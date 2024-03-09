@@ -18,7 +18,7 @@ $query = 'SELECT * FROM postres';
 // Ejecución de la consulta
 $stmt = $db->query($query);
 ?>
-
+<div id="contenedor">
 <div id="postres">
 
 <?php
@@ -28,13 +28,14 @@ while ($postre = $stmt->fetch()) {
   <div class="postre">
     <img src="<?php echo $postre['imagen']; ?>" alt="<?php echo $postre['nombre']; ?>">
     <h3><?php echo $postre['nombre']; ?></h3>
-    <p><?php echo $postre['descripcion']; ?></p>
-    <span class="precio"><?php echo $postre['precio']; ?>€</span>
+    <span class="precio" data-precio="<?php echo $postre['precio']; ?>"><?php echo $postre['precio']; ?>€</span>
+    <button class="añadir-producto" data-producto="<?php echo $postre['nombre']; ?>" data-precio="<?php echo $postre['precio']; ?>">Añadir Producto</button>
   </div>
   <?php
 }
-
+include 'carrito.php';
 ?>
+</div>
 </div>
 
 </body>
