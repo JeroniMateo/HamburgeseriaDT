@@ -29,7 +29,7 @@ while ($complemento = $stmt->fetch()) {
     <img src="<?php echo $complemento['imagen']; ?>" alt="<?php echo $complemento['nombre']; ?>">
     <h3><?php echo $complemento['nombre']; ?></h3>
     <span class="precio" data-precio="<?php echo $complemento['precio']; ?>"><?php echo $complemento['precio']; ?>€</span>
-    <button class="añadir-producto" data-producto="<?php echo $complemento['nombre']; ?>" data-precio="<?php echo $complemento['precio']; ?>">Añadir Producto</button>
+    <button class="añadir-producto" data-producto="<?php echo $complemento['nombre']; ?>" data-precio="<?php echo $complementoº['precio']; ?>">Añadir Producto</button>
   </div>
   <?php
 }

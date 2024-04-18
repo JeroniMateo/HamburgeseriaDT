@@ -115,4 +115,30 @@ section {
     width: 100%;
   }
 }
+#login_buttons{
+  margin-left: 50vh;
+}
+.custom-btn {
+  border-radius: 25px;
+}
+#login {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  
+}
+#signin{
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  margin-left: 10px;
+}
+.btn:hover {
+  opacity: 0.8;
+}
 
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
