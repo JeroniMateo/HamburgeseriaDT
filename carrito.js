@@ -7,21 +7,7 @@
     let total = 0;
     const carrito = {};
 //Añadir Producto
-    function añadirProducto(producto, precio) {
-      if (carrito[producto]) {
-        carrito[producto].cantidad++;
-      } else {
-        carrito[producto] = {
-          cantidad: 1,
-          precio: precio
-        };
-      }
-
-      total += precio;
-      totalSpan.textContent = total.toFixed(2);
-
-      renderizarCarrito();
-    }
+   
 
     botonesAñadir.forEach(boton => {
       boton.addEventListener('click', () => {
@@ -79,5 +65,42 @@
         listaProductos.appendChild(item);
       }
     }
-  });
 
+    
+    
+ //Funcion que añade un nuevo producto y lo inserta en la base de datos   
+    function añadirProducto(producto, precio,descripcion) {
+      if (carrito[producto]) {
+        carrito[producto].cantidad++;
+      } else {
+        carrito[producto] = {
+          cantidad: 1,
+          precio: precio
+        };
+      }
+      
+      total += precio;
+      totalSpan.textContent = total.toFixed(2);
+      
+      renderizarCarrito();
+      
+      var nombre = producto;
+      var descripcion = descripcion;
+      var precio = precio;
+      
+      // Envía una solicitud POST al servidor
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "productos.php", true);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          // La solicitud se ha completado y la respuesta del servidor está lista
+          console.log(xhr.responseText); // Puedes mostrar algún mensaje de confirmación aquí
+        }
+      };
+      xhr.send("nombre=" + nombre + "&descripcion=" + descripcion + "&precio=" + precio);
+      
+    }
+  });
+    
+    
