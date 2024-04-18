@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
+<?php
+include 'db.php';
+include 'navbar.php';
+?>
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Inicio de sesión</h5>
