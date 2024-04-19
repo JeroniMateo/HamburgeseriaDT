@@ -18,18 +18,34 @@
     ></script>
   </head>
   <body>
+    <?php
+    // Creamos una nueva sesion para el usuario
+    session_start(); // Esto debe ir al principio, antes de cualquier salida HTML
+
+    // Después de validar y confirmar que el login o registro es correcto:
+    $_SESSION['username'] = $username;  // Suponiendo que $username contiene el nombre del usuario
+    ?>
     <header>
       <h1>BIENVENIDO A LA HAMBURGUESERIA DT</h1>
+      <?php session_start(); ?>
       <div id="login_buttons">
+      <!-- Si el usuario esta registrado hacemos que aprezca su nombre -->
+      <?php if (isset($_SESSION['username'])): ?>
+        <!-- Si el usuario está logueado, mostrar su nombre -->
+        <span>Hola, <?php echo htmlspecialchars($_SESSION['username']); ?>!</span>
+        <a href="logout.php" class="btn btn-danger">Cerrar Sesión</a>
+      <!-- en caso contrario que aparezca la opcion de iniciar o crearse usuario -->
+      <?php else: ?>
+        <!-- Si no, mostrar los botones de login y sign up -->
         <a href="login.php" id="login" class="btn custom-btn login-btn">Login</a>
-        <a href="login.php" id="signin" class="btn custom-btn signup-btn">Sign Up</a>
-      </div>
+        <a href="signup.php" id="signin" class="btn custom-btn signup-btn">Sign Up</a>
+      <?php endif; ?>
+    </div>
     </header>
     <div id="navbar">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" id="mainNavbar" href="Hamburgueseria.html">Hamburgueseria DT</a>
-        
         <button
           class="navbar-toggler"
           type="button"
