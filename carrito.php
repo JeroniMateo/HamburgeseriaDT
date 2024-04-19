@@ -1,13 +1,4 @@
 
-Si prefieres manejar todo en un solo archivo PHP para mantener las cosas simples y centralizadas, puedes integrar la lógica del formulario y el procesamiento de los botones en el mismo archivo. A continuación, te muestro cómo podrías estructurarlo:
-
-Paso 1: Combinar HTML y PHP en un Solo Archivo
-Puedes colocar tanto el formulario como el código de procesamiento en el mismo archivo PHP, gestionando las acciones en base a la entrada del formulario. Aquí tienes un ejemplo de cómo podría ser:
-
-carrito.php
-
-php
-Copy code
 <?php
 session_start();
 include 'db.php';
