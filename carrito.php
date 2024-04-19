@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($_POST['accion'] == 'pagar') {
             // Lógica para procesar el pago
             // Redireccionar a la página de confirmación del pedido
-            header("Location: pago.php");
+            header("Location: Hamburgueseria.Html");
             exit();
         } elseif ($_POST['accion'] == 'cancelar') {
             // Lógica para cancelar el pedido
