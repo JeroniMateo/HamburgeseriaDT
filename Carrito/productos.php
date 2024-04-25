@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include '../DB/db.php';
 
 // Obtener los parámetros del cuerpo de la solicitud POST
 $nombre = $_POST['nombre'];

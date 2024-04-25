@@ -27,12 +27,12 @@
       <?php if (isset($_SESSION['username'])): ?>
         <!-- Si el usuario está logueado, mostrar su nombre -->
         <span>Hola, <?php echo htmlspecialchars($_SESSION['username']); ?>!</span>
-        <a href="logout.php" class="btn btn-danger">Cerrar Sesión</a>
+        <a href="User/logout.php" class="btn btn-danger">Cerrar Sesión</a>
       <!-- en caso contrario que aparezca la opcion de iniciar o crearse usuario -->
       <?php else: ?>
         <!-- Si no, mostrar los botones de login y sign up -->
-        <a href="login.php" id="login" class="btn custom-btn login-btn">Login</a>
-        <a href="signup.php" id="signin" class="btn custom-btn signup-btn">Sign Up</a>
+        <a href="User/login.php" id="login" class="btn custom-btn login-btn">Login</a>
+        <a href="User/signup.php" id="signin" class="btn custom-btn signup-btn">Sign Up</a>
       <?php endif; ?>
     </div>
     </header>

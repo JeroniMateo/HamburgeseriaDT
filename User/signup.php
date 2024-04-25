@@ -40,7 +40,7 @@
 </html>
 
 <?php
-include 'db.php'; // Incluye el archivo de conexión a la base de datos.
+include '../DB/db.php';
 
 $message = ''; // Mensaje para el usuario
 

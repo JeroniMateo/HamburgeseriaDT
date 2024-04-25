@@ -1,7 +1,7 @@
 
 <?php
 session_start();
-include 'db.php';
+include '../DB/db.php';
 
 // Verifica si se envió el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -9,13 +9,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($_POST['accion'] == 'pagar') {
             // Lógica para procesar el pago
             // Redireccionar a la página de confirmación del pedido
-            header("Location: Hamburgueseria.php");
+            header("Location: ../Hamburgueseria.php");
             exit();
         } elseif ($_POST['accion'] == 'cancelar') {
             // Lógica para cancelar el pedido
             $sql = "TRUNCATE TABLE Pedido"; // Asegúrate de que esta es la lógica correcta para tu aplicación
             if ($db->query($sql) === TRUE) {
-                header("Location: carrito.php"); // Refrescar la página del carrito
+                header("Location: ../Hamburgueseria.php"); // Refrescar la página del carrito
                 exit();
             } else {
                 echo "Error al limpiar el carrito: ";
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <ul id="lista-productos">
   <?php
 // Incluir el archivo de conexión a la base de datos
-include 'db.php';
+include '../DB/db.php';
 
 // Consulta SQL para obtener los productos del pedido
 $sql = "SELECT * FROM Pedido";
@@ -66,7 +66,7 @@ if ($resultados) {
 // Verificar si se ha enviado el formulario y se ha pulsado el botón con nombre "addCantidad"
 if (isset($_POST['addCantidad'])) {
     // Incluir el archivo de conexión a la base de datos
-    include 'db.php';
+    include '../DB/db.php';
 
     // Consulta SQL para sumar 1 a la columna cantidad
     $sql = "UPDATE pedido SET cantidad = cantidad + 1 WHERE nombre = :id";

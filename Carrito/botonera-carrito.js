@@ -19,7 +19,7 @@ function cancelarPedido() {
 
 
 function pagar() {
-  window.location.href = "pago.php"; 
+  window.location.href = "../PAGO/pago.php"; 
 };
 
 

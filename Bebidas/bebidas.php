@@ -9,8 +9,8 @@
 
 <?php
 
-include 'db.php';
-include 'navbar.php';
+include '../DB/db.php';
+include '../navbar.php';
 
 
 // Consulta para obtener las bebidas
@@ -34,7 +34,7 @@ while ($bebida = $stmt->fetch()) {
   </div>
   <?php
 }
-include 'carrito.php';
+include '../Carrito/carrito.php';
 ?>
 </div>
 </div>

@@ -8,8 +8,8 @@
 <body>
   <?php
 
-include 'db.php';
-include 'navbar.php';
+include '../DB/db.php';
+include '../navbar.php';
 
 
 // Consulta para obtener los postres

@@ -17,18 +17,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="hamburguesas.php">Hamburguesas</a>
+          <a class="nav-link" href="/Hamburguesas/Hamburguesas.php">Hamburguesas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="complementos.php">Complementos</a>
+          <a class="nav-link" href="/Complementos/complementos.php">Complementos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="bebidas.php">Bebidas</a>
+          <a class="nav-link" href="/Bebidas/bebidas.php">Bebidas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="postres.php">Postres</a>
+          <a class="nav-link" href="/Postres/postres.php">Postres</a>
         </li><li class="nav-item">
-          <a class="nav-link" href="menus.php">Menús</a>
+          <a class="nav-link" href="/Menus/menus.php">Menús</a>
         </li>
       </ul>
       <form class="d-flex" role="search">

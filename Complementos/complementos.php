@@ -10,7 +10,7 @@
 <?php
 
 include 'db.php';
-include 'navbar.php';
+include '../navbar.php';
 
 
 // Consulta para obtener los complementos
