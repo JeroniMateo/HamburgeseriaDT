@@ -38,19 +38,19 @@ include 'db.php'; // Incluye la conexión a la base de datos
 $message = ''; // Mensaje para el usuario
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $conn->real_escape_string($_POST['username']);
-    $password = $conn->real_escape_string($_POST['password']);
+    $username = $sql->real_escape_string($_POST['username']);
+    $password = $sql->real_escape_string($_POST['password']);
 
     // Verifica si el usuario existe y la contraseña es correcta
     $sql = "SELECT * FROM Usuarios WHERE username = '$username'";
-    $result = $conn->query($sql);
+    $result = $db->query($sql);
 
-    if ($result->num_rows > 0) {
-        $user = $result->fetch_assoc();
+    if ($result->$row > 0) {
+        // $user = $result->fetch_assoc();
         // Verificar la contraseña
         if (password_verify($password, $user['password'])) {
             $message = "Usuario correcto. ¡Bienvenido!";
-            header('Location: hamburgueseria.html');
+            header('Location: Hamburgueseria.php');
             exit; // Asegura que el script se detenga después de la redirección
         } else {
             $message = "Contraseña incorrecta.";

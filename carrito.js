@@ -31,6 +31,7 @@
         cantidadProducto.classList.add('cantidad');
         cantidadProducto.textContent = 'Cantidad:';
         const botonRestar = document.createElement('button');
+        botonRestar.setAttribute('name', 'removeCantidad');
         botonRestar.textContent = '-';
         botonRestar.addEventListener('click', () => {
           if (carrito[producto].cantidad > 1) {
@@ -47,6 +48,7 @@
         cantidadProducto.appendChild(cantidadTexto);
     
         const botonSumar = document.createElement('button');
+        botonSumar.setAttribute('name', 'addCantidad');
         botonSumar.textContent = '+';
         botonSumar.addEventListener('click', () => {
           carrito[producto].cantidad++;

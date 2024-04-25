@@ -6,6 +6,7 @@ $nombre = $_POST['nombre'];
 $descripcion = $_POST['descripcion'];
 $precio = $_POST['precio'];
 
+
 // Consulta SQL para insertar el producto en la tabla 'pedido'
 $sql = "INSERT INTO Pedido (nombre, descripcion, precio) VALUES (:nombre, :descripcion, :precio)";
 
@@ -16,6 +17,7 @@ $stmt = $db->prepare($sql);
 $stmt->bindParam(':nombre', $nombre);
 $stmt->bindParam(':descripcion', $descripcion);
 $stmt->bindParam(':precio', $precio);
+
 
 // Ejecutar la consulta
 if ($stmt->execute()) {

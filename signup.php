@@ -45,30 +45,30 @@ include 'db.php'; // Incluye el archivo de conexión a la base de datos.
 $message = ''; // Mensaje para el usuario
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $conn->real_escape_string($_POST['username']);
-    $email = $conn->real_escape_string($_POST['email']);
-    $password = $conn->real_escape_string($_POST['password']);
-    $confirm_password = $conn->real_escape_string($_POST['confirm_password']);
+    $username = $sql->real_escape_string($_POST['username']);
+    $email = $sql->real_escape_string($_POST['email']);
+    $password = $sql->real_escape_string($_POST['password']);
+    $confirm_password = $sql->real_escape_string($_POST['confirm_password']);
 
     if ($password !== $confirm_password) {
         $message = "Las contraseñas no coinciden.";
     } else {
         // Verifica si el usuario ya existe
         $sql = "SELECT * FROM Usuarios WHERE username = '$username'";
-        $result = $conn->query($sql);
+        $result = $db->query($sql);
 
-        if ($result->num_rows > 0) {
+        if ($resultados) {
             $message = "El usuario ya existe.";
         } else {
             // Inserta el nuevo usuario
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             $insertSql = "INSERT INTO Usuarios (username, email, password) VALUES ('$username', '$email', '$hashed_password')";
-            if ($conn->query($insertSql) === TRUE) {
+            if ($db->query($insertSql) === TRUE) {
                 $message = "Usuario registrado con éxito.";
-                header('Location: hamburgueseria.html');
+                header('Location: Hamburgueseria.php');
             exit; // Asegura que el script se detenga después de la redirección
             } else {
-                $message = "Error: " . $conn->error;
+                $message = "Error: ";
             }
         }
     }
